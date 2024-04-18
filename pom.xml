@@ -40,6 +40,24 @@
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                 </configuration>
             </plugin>
+		<plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+            <version>1.7.7</version>
+            <configuration>
+                <container>
+                    <containerId>tomcat9x</containerId>
+                    <type>remote</type>
+                </container>
+                <configuration>
+                    <type>runtime</type>
+                    <properties>
+                        <cargo.remote.username>admin</cargo.remote.username>
+                        <cargo.remote.password>password</cargo.remote.password>
+                    </properties>
+                </configuration>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
     
